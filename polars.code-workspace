@@ -1,0 +1,51 @@
+{
+	"folders": [
+		{
+			"path": "polars"
+		}
+	],
+	"settings": {
+		"actionButtons": {
+			"commands": [
+				{
+					"name": "🖉",
+					"useVsCodeApi": true,
+					"command": "workbench.action.openWorkspaceSettingsFile",
+				},
+				{
+					"name": "CoC",
+					"singleInstance": true,
+					"useVsCodeApi": false,
+					"command": "open https://docs.pola.rs/development/contributing",
+				},
+				{
+					"name": "test",
+					"singleInstance": true,
+					"useVsCodeApi": false,
+					"command": "conda activate polars-dev && cd py-polars && make test",
+				},
+				{
+					"name": "pre-commit",
+					"singleInstance": true,
+					"useVsCodeApi": false,
+					"command": "conda activate polars-dev && make pre-commit",
+				},
+				{
+					"name": "clean",
+					"singleInstance": true,
+					"useVsCodeApi": false,
+					"command": "cargo clean",
+				},
+				{
+					"name": "reqs",
+					"singleInstance": true,
+					"useVsCodeApi": false,
+					"command": "conda activate polars-dev && make requirements",
+				},
+			],
+			"defaultColor": "Yellow",
+			"reloadButton": "↻",
+			"loadNpmCommands": false
+		}
+	}
+}
