@@ -1,0 +1,9 @@
+[package]
+name = "ehlo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# polars = { version = "0.42.0", features = [ "streaming", "lazy", "cloud_write", "parquet", "aws", "cloud" ] }
+polars = { version = "0.42.0", features = [ "lazy", "parquet" ] }
+# polars = { path = "../../polars/crates/polars", features = [ "streaming", "lazy", "cloud_write", "parquet", "aws", "cloud" ] }
