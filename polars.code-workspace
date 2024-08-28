@@ -30,17 +30,50 @@
 					"useVsCodeApi": false,
 					"command": "conda activate polars-dev && make pre-commit",
 				},
+
 				{
 					"name": "clean",
 					"singleInstance": true,
 					"useVsCodeApi": false,
-					"command": "cargo clean",
+					"command": "cargo clean && rm -rf .venv",
 				},
 				{
 					"name": "reqs",
 					"singleInstance": true,
 					"useVsCodeApi": false,
 					"command": "conda activate polars-dev && make requirements",
+				},
+				{
+					"name": "rebase",
+					"singleInstance": true,
+					"useVsCodeApi": false,
+					"command": "git checkout main && git fetch upstream && git rebase upstream/main",
+				},
+
+				{
+					"name": "rsdoc",
+					"singleInstance": true,
+					"useVsCodeApi": false,
+					"command": "conda activate polars-dev && cd crates && make doctest",
+				},
+				{
+					"name": "pydoc",
+					"singleInstance": true,
+					"useVsCodeApi": false,
+					"command": "conda activate polars-dev && cd py-polars/docs && make html",
+				},
+
+				{
+					"name": "serve pydoc",
+					"singleInstance": true,
+					"useVsCodeApi": false,
+					"command": "conda activate polars-dev && make requirements",
+				},
+				{
+					"name": "serve rsdoc",
+					"singleInstance": true,
+					"useVsCodeApi": false,
+					"command": "cd crates && cargo doc --open",
 				},
 			],
 			"defaultColor": "Yellow",
